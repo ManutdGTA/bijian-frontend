@@ -15,7 +15,9 @@ import CarouselContent from "@/components/CarouselContent.vue";
 export default {
   name: "PlatformView",
   data() {
-    return {};
+    return {
+      tabIndex: 0,
+    };
   },
   components: {
     TopBanner,

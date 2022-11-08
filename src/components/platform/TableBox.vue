@@ -11,29 +11,43 @@
         </template>
       </el-table-column>
 
-      <el-table-column prop="rank" label="#"> </el-table-column>
+      <el-table-column prop="rank" label="#" width="50"> </el-table-column>
       <!-- <el-table-column prop="name" label="币种"> </el-table-column> -->
-      <el-table-column label="币种" width="150">
+      <el-table-column label="交易平台" width="150">
         <template slot-scope="scope">
           <div class="table_box_coin">
             <div class="table_coin_img">
-              <img src="@/assets/bitcoin.webp" alt="" />
+              <img src="@/assets/binance.webp" alt="" />
             </div>
             <div class="table_coin_info">
               <div class="table_coin_name">
                 {{ scope.row.name }}
               </div>
-              <div class="table_coin_nameZh">比特币</div>
             </div>
           </div>
         </template>
       </el-table-column>
-      <el-table-column prop="value" label="流通市值"> </el-table-column>
-      <el-table-column prop="price" label="最新价"> </el-table-column>
+      <el-table-column prop="value" label="Exrank">
+        <template>
+          <div>
+            <el-progress :percentage="90"></el-progress>
+          </div>
+        </template>
+      </el-table-column>
+
       <el-table-column prop="trade" label="24H额"> </el-table-column>
-      <el-table-column prop="liquid" label="流通数量"> </el-table-column>
-      <el-table-column prop="tradeIn24H" label="24H换手"> </el-table-column>
-      <el-table-column prop="priceChange" label="今日涨幅（%）">
+      <el-table-column prop="priceChange" label="24H涨跌（%）">
+      </el-table-column>
+      <el-table-column prop="liquid" label="资产"> </el-table-column>
+      <el-table-column prop="tradeIn24H" label="交易对（个）">
+      </el-table-column>
+
+      <el-table-column label="人气指数" width="150">
+        <template slot-scope="scope">
+          <div>
+            <el-rate v-model="scope.row.rate" disabled></el-rate>
+          </div>
+        </template>
       </el-table-column>
       <!-- <el-table-column prop="symbol" label="7天指数趋势"> </el-table-column> -->
     </el-table>
@@ -59,123 +73,135 @@ export default {
       tableData: [
         {
           rank: "01",
-          name: "BTC",
+          name: "Binance",
           value: "3926.6亿",
           price: "20756.65",
           liquid: "1919.5万",
           trade: "1.57%",
-          tradeIn24H: "1.57%",
+          tradeIn24H: "1062",
           priceChange: "-0.83% ",
+          rate: 5,
         },
         {
           rank: "02",
-          name: "BTC",
+          name: "Binance",
           value: "3926.6亿",
           price: "20756.65",
           liquid: "1919.5万",
           trade: "1.57%",
-          tradeIn24H: "1.57%",
+          tradeIn24H: "1062",
           priceChange: "-0.83% ",
+          rate: 4,
         },
         {
           rank: "03",
-          name: "BTC",
+          name: "Binance",
           value: "3926.6亿",
           price: "20756.65",
           liquid: "1919.5万",
           trade: "1.57%",
-          tradeIn24H: "1.57%",
+          tradeIn24H: "1062",
           priceChange: "-0.83% ",
+          rate: 3,
         },
         {
           rank: "04",
-          name: "BTC",
+          name: "Binance",
           value: "3926.6亿",
           price: "20756.65",
           liquid: "1919.5万",
           trade: "1.57%",
-          tradeIn24H: "1.57%",
+          tradeIn24H: "1062",
           priceChange: "-0.83% ",
+          rate: 1.5,
         },
         {
           rank: "05",
-          name: "BTC",
+          name: "Binance",
           value: "3926.6亿",
           price: "20756.65",
           liquid: "1919.5万",
           trade: "1.57%",
-          tradeIn24H: "1.57%",
+          tradeIn24H: "1062",
           priceChange: "-0.83% ",
+          rate: 1.5,
         },
         {
           rank: "06",
-          name: "BTC",
+          name: "Binance",
           value: "3926.6亿",
           price: "20756.65",
           liquid: "1919.5万",
           trade: "1.57%",
-          tradeIn24H: "1.57%",
+          tradeIn24H: "1062",
           priceChange: "-0.83% ",
+          rate: 1.5,
         },
         {
           rank: "07",
-          name: "BTC",
+          name: "Binance",
           value: "3926.6亿",
           price: "20756.65",
           liquid: "1919.5万",
           trade: "1.57%",
-          tradeIn24H: "1.57%",
+          tradeIn24H: "1062",
           priceChange: "-0.83% ",
+          rate: 1.5,
         },
         {
           rank: "08",
-          name: "BTC",
+          name: "Binance",
           value: "3926.6亿",
           price: "20756.65",
           liquid: "1919.5万",
           trade: "1.57%",
-          tradeIn24H: "1.57%",
+          tradeIn24H: "1062",
           priceChange: "-0.83% ",
+          rate: 1.5,
         },
         {
           rank: "09",
-          name: "BTC",
+          name: "Binance",
           value: "3926.6亿",
           price: "20756.65",
           liquid: "1919.5万",
           trade: "1.57%",
-          tradeIn24H: "1.57%",
+          tradeIn24H: "1062",
           priceChange: "-0.83% ",
+          rate: 1.2,
         },
         {
           rank: "10",
-          name: "BTC",
+          name: "Binance",
           value: "3926.6亿",
           price: "20756.65",
           liquid: "1919.5万",
           trade: "1.57%",
-          tradeIn24H: "1.57%",
+          tradeIn24H: "1062",
           priceChange: "-0.83% ",
+          rate: 1,
         },
         {
           rank: "11",
-          name: "BTC",
+          name: "Binance",
           value: "3926.6亿",
           price: "20756.65",
           liquid: "1919.5万",
           trade: "1.57%",
-          tradeIn24H: "1.57%",
+          tradeIn24H: "1062",
           priceChange: "-0.83% ",
+          rate: 0,
         },
         {
           rank: "12",
-          name: "BTC",
+          name: "Binance",
           value: "3926.6亿",
           price: "20756.65",
           liquid: "1919.5万",
           trade: "1.57%",
-          tradeIn24H: "1.57%",
+          tradeIn24H: "1062",
           priceChange: "-0.83% ",
+          rate: 0,
         },
       ],
       slugData: "",
@@ -183,6 +209,9 @@ export default {
       isLoading: false,
       currentPage: 0,
     };
+  },
+  props: {
+    tabIndex: Number,
   },
   methods: {
     handleSizeChange(val) {
@@ -193,6 +222,11 @@ export default {
     },
     handleStar(v) {
       console.log(v);
+    },
+  },
+  watch: {
+    tabIndex(newData) {
+      console.log(newData);
     },
   },
 };

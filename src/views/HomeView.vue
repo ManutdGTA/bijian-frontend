@@ -5,8 +5,13 @@
     <CarouselContent></CarouselContent>
     <NoticeBox></NoticeBox>
     <DataDetail></DataDetail>
-    <TabBox></TabBox>
-    <TableBox></TableBox>
+    <TabBox @sendSelectTab="handleReceiveTab"></TabBox>
+    <TabChildBox
+      :tabIndex="tabIndex"
+      @sendSelectChildTab="handleReceiveChildTab"
+    ></TabChildBox>
+
+    <TableBox :tabIndex="tabIndex" :tabChildIndex="tabChildIndex"></TableBox>
     <BottomPage></BottomPage>
   </div>
 </template>
@@ -18,8 +23,10 @@ import BottomPage from "@/components/BottomPage.vue";
 import CarouselContent from "@/components/CarouselContent.vue";
 import NoticeBox from "@/components/NoticeBox.vue";
 import DataDetail from "@/components/DataDetail.vue";
-import TabBox from "@/components/TabBox.vue";
-import TableBox from "@/components/TableBox.vue";
+import TabBox from "@/components/home/TabBox.vue";
+import TabChildBox from "@/components/home/TabChildBox.vue";
+
+import TableBox from "@/components/home/TableBox.vue";
 
 export default {
   name: "homeView",
@@ -30,7 +37,22 @@ export default {
     NoticeBox,
     DataDetail,
     TabBox,
+    TabChildBox,
     TableBox,
+  },
+  data() {
+    return {
+      tabIndex: 0,
+      tabChildIndex: 0,
+    };
+  },
+  methods: {
+    handleReceiveTab(v) {
+      this.tabIndex = v;
+    },
+    handleReceiveChildTab(v) {
+      this.tabChildIndex = v;
+    },
   },
 };
 </script>

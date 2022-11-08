@@ -166,31 +166,35 @@
       </div>
     </div>
     <div class="tabs_box_right">
-      <el-dropdown>
-        <span class="el-dropdown-link">
-          24H涨幅<i class="el-icon-arrow-down el-icon--right"></i>
-        </span>
-        <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item>今日涨幅(北京时间UTC+8)</el-dropdown-item>
-          <el-dropdown-item>今日涨幅(世界时间UTC+0)</el-dropdown-item>
-        </el-dropdown-menu>
-      </el-dropdown>
-      <el-dropdown>
-        <span class="el-dropdown-link">
-          美元<i class="el-icon-arrow-down el-icon--right"></i>
-        </span>
-        <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item>英镑</el-dropdown-item>
-          <el-dropdown-item>加元</el-dropdown-item>
-          <el-dropdown-item>新台币</el-dropdown-item>
-          <el-dropdown-item>卢比</el-dropdown-item>
-          <el-dropdown-item>比特币</el-dropdown-item>
-          <el-dropdown-item>澳元</el-dropdown-item>
-          <el-dropdown-item>港币</el-dropdown-item>
-          <el-dropdown-item>美元</el-dropdown-item>
-          <el-dropdown-item>人民币</el-dropdown-item>
-        </el-dropdown-menu>
-      </el-dropdown>
+      <div class="ml16">
+        <el-dropdown>
+          <span class="el-dropdown-link">
+            24H涨幅<i class="el-icon-arrow-down el-icon--right"></i>
+          </span>
+          <el-dropdown-menu slot="dropdown">
+            <el-dropdown-item>今日涨幅(北京时间UTC+8)</el-dropdown-item>
+            <el-dropdown-item>今日涨幅(世界时间UTC+0)</el-dropdown-item>
+          </el-dropdown-menu>
+        </el-dropdown>
+      </div>
+      <div class="ml16">
+        <el-dropdown>
+          <span class="el-dropdown-link">
+            美元<i class="el-icon-arrow-down el-icon--right"></i>
+          </span>
+          <el-dropdown-menu slot="dropdown">
+            <el-dropdown-item>英镑</el-dropdown-item>
+            <el-dropdown-item>加元</el-dropdown-item>
+            <el-dropdown-item>新台币</el-dropdown-item>
+            <el-dropdown-item>卢比</el-dropdown-item>
+            <el-dropdown-item>比特币</el-dropdown-item>
+            <el-dropdown-item>澳元</el-dropdown-item>
+            <el-dropdown-item>港币</el-dropdown-item>
+            <el-dropdown-item>美元</el-dropdown-item>
+            <el-dropdown-item>人民币</el-dropdown-item>
+          </el-dropdown-menu>
+        </el-dropdown>
+      </div>
     </div>
   </div>
 </template>
@@ -205,6 +209,7 @@ export default {
   methods: {
     handleSelectTab(v) {
       this.tabIndex = v;
+      this.$emit("sendSelectTab", v);
     },
   },
 };
@@ -287,5 +292,8 @@ export default {
 .tabs_box .tabs_box_right {
   display: flex;
   align-items: center;
+}
+.ml16 {
+  margin-left: 16px;
 }
 </style>
