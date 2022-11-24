@@ -1,11 +1,11 @@
 <template>
   <div class="block">
     <TopBanner :tabIndex="2"></TopBanner>
-    <div class="block">
-      <CarouselContent></CarouselContent>
-      <TabBox @sendSelectTab="handleReceiveTab"></TabBox>
-      <TableBox :tabIndex="tabIndex"></TableBox>
-    </div>
+
+    <CarouselContent></CarouselContent>
+    <TabBox @sendSelectTab="handleReceiveTab"></TabBox>
+    <TableBox :tabIndex="tabIndex"></TableBox>
+
     <BottomPage></BottomPage>
   </div>
 </template>
