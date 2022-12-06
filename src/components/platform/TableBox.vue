@@ -1,6 +1,11 @@
 <template>
   <div class="table_box">
-    <el-table :data="tableData" style="width: 100%" v-loading="isLoading">
+    <el-table
+      :data="tableData"
+      style="width: 100%"
+      v-loading="isLoading"
+      @row-click="handleDetail"
+    >
       <el-table-column label="" width="50">
         <template slot-scope="scope">
           <div class="table_box_coin">
@@ -222,6 +227,12 @@ export default {
     },
     handleStar(v) {
       console.log(v);
+    },
+    handleDetail(row) {
+      this.$router.push({
+        name: "platformDetail",
+        query: { platformId: row.rank },
+      });
     },
   },
   watch: {

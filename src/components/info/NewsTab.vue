@@ -11,7 +11,7 @@
       <div class="news_tabs_item">教程</div>
     </div>
     <div class="news_list">
-      <div class="news_list_item">
+      <div class="news_list_item" @click="handleDetail">
         <div class="list_item_img">
           <img src="@/assets/news.png" alt="" />
         </div>
@@ -46,7 +46,15 @@
     </div>
   </div>
 </template>
-<script></script>
+<script>
+export default {
+  methods: {
+    handleDetail() {
+      this.$router.push({ name: "infoDetail", query: { infoId: "1" } });
+    },
+  },
+};
+</script>
 <style lang="less" scoped>
 .news {
   width: 1200px;

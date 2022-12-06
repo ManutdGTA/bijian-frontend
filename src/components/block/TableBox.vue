@@ -1,20 +1,21 @@
 <template>
   <div class="table_box">
-    <el-table :data="tableData" style="width: 100%" v-loading="isLoading">
+    <el-table
+      :data="tableData"
+      style="width: 100%"
+      v-loading="isLoading"
+      @row-click="handleDetail"
+    >
       <el-table-column prop="rank" label="#" width="50"> </el-table-column>
       <el-table-column prop="concept" label="概念"> </el-table-column>
       <el-table-column label="领涨" width="150">
         <template slot-scope="scope">
-          <div data-v-93a49ede="" class="table_box_best">
-            <div data-v-93a49ede="" class="best_icon">
+          <div class="table_box_best">
+            <div class="best_icon">
               {{ scope.row.valueToken }}
             </div>
             &nbsp;
-            <div
-              data-v-93a49ede=""
-              class="best_percent"
-              style="color: rgb(22, 176, 86)"
-            >
+            <div class="best_percent" style="color: rgb(22, 176, 86)">
               {{ scope.row.price }}
             </div>
           </div>
@@ -103,6 +104,9 @@ export default {
     },
     handleStar(v) {
       console.log(v);
+    },
+    handleDetail(row) {
+      this.$router.push({ name: "blockDetail", query: { blockId: row.rank } });
     },
   },
   watch: {

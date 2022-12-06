@@ -12,9 +12,8 @@
         </p>
       </div>
       <div class="dataDetail_item_echarts">
-        <div data-v-70dca7e3="">
+        <div>
           <div
-            data-v-70dca7e3=""
             id="echarts_0"
             class="eachartsBox"
             style="
@@ -72,9 +71,8 @@
         </p>
       </div>
       <div class="dataDetail_item_echarts">
-        <div data-v-70dca7e3="">
+        <div>
           <div
-            data-v-70dca7e3=""
             id="echarts_1"
             class="eachartsBox"
             style="
@@ -132,9 +130,8 @@
         </p>
       </div>
       <div class="dataDetail_item_echarts">
-        <div data-v-70dca7e3="">
+        <div>
           <div
-            data-v-70dca7e3=""
             id="echarts_2"
             class="eachartsBox"
             style="
@@ -192,9 +189,8 @@
         </p>
       </div>
       <div class="dataDetail_item_echarts">
-        <div data-v-70dca7e3="">
+        <div>
           <div
-            data-v-70dca7e3=""
             id="echarts_3"
             class="eachartsBox"
             style="

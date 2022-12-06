@@ -11,6 +11,15 @@ const routes = [
     component: HomeView,
   },
   {
+    path: "/homeDetail",
+    name: "homeDetail",
+    // route level code-splitting
+    // this generates a separate chunk (homeDetail.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "homeDetail" */ "../views/HomeDetail.vue"),
+  },
+  {
     path: "/about",
     name: "about",
     // route level code-splitting
@@ -30,6 +39,17 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/PlatformView.vue"),
   },
   {
+    path: "/platformDetail",
+    name: "platformDetail",
+    // route level code-splitting
+    // this generates a separate chunk (platformDetail.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(
+        /* webpackChunkName: "platformDetail" */ "../views/PlatformDetail.vue"
+      ),
+  },
+  {
     path: "/wallet",
     name: "wallet",
     // route level code-splitting
@@ -39,6 +59,17 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/WalletView.vue"),
   },
   {
+    path: "/walletDetail",
+    name: "walletDetail",
+    // route level code-splitting
+    // this generates a separate chunk (walletDetail.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(
+        /* webpackChunkName: "walletDetail" */ "../views/WalletDetail.vue"
+      ),
+  },
+  {
     path: "/block",
     name: "block",
     // route level code-splitting
@@ -46,6 +77,15 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/BlockView.vue"),
+  },
+  {
+    path: "/blockDetail",
+    name: "blockDetail",
+    // route level code-splitting
+    // this generates a separate chunk (blockDetail.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "blockDetail" */ "../views/BlockDetail.vue"),
   },
   {
     path: "/rank",
@@ -64,6 +104,15 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/InfoView.vue"),
+  },
+  {
+    path: "/infoDetail",
+    name: "infoDetail",
+    // route level code-splitting
+    // this generates a separate chunk (infoDetail.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "infoDetail" */ "../views/InfoDetail.vue"),
   },
   {
     path: "/fastInfo",
