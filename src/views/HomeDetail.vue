@@ -1014,12 +1014,12 @@ export default {
     color: #7c8291;
     line-height: 24px;
   }
-  .homedatail_content[data-v-186f69da] {
+  .homedatail_content {
     display: flex;
     justify-content: space-between;
     margin-bottom: 80px;
   }
-  .homedatail_tabs_content[data-v-186f69da] {
+  .homedatail_tabs_content {
     width: 100%;
   }
   .brief_boxs .brief_table {

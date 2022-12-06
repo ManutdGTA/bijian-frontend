@@ -150,7 +150,7 @@ export default {
   // color: #7c8291;
   line-height: 17px;
 }
-.table_box .table_box_best[data-v-93a49ede] {
+.table_box .table_box_best {
   display: flex;
   align-items: center;
 }

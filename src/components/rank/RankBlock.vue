@@ -328,21 +328,17 @@ export default {
   color: #7c8291;
   cursor: pointer;
 }
-.ranking .table_box .table_content .table_box_coin[data-v-06782e0f] {
+.ranking .table_box .table_content .table_box_coin {
   display: flex;
   align-items: center;
 }
-.ranking .table_box .table_content .table_box_coin img[data-v-06782e0f] {
+.ranking .table_box .table_content .table_box_coin img {
   margin-right: 8px;
   border-radius: 50%;
   width: 18px;
   height: 18px;
 }
-.ranking
-  .table_box
-  .table_content
-  .table_box_coin
-  .table_coin_info[data-v-06782e0f] {
+.ranking .table_box .table_content .table_box_coin .table_coin_info {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
